@@ -21,11 +21,11 @@ class FilteredMovieItem extends StatelessWidget {
               Expanded(
                 child: CachedNetworkImage(
                   imageUrl:
-                      "https://image.tmdb.org/t/p/w500${movie.posterPath}",
+                  "https://image.tmdb.org/t/p/w500${movie.posterPath}",
                   placeholder: (context, url) => Center(
                       child: CircularProgressIndicator(
-                    color: Colors.white,
-                  )),
+                        color: Colors.white,
+                      )),
                   errorWidget: (context, url, error) => Icon(Icons.error),
                 ),
               ),
@@ -48,9 +48,9 @@ class FilteredMovieItem extends StatelessWidget {
                             .textTheme
                             .titleMedium
                             ?.copyWith(
-                                color: MyTheme.greyColor,
-                                fontSize: 15.h,
-                                fontWeight: FontWeight.w400),
+                            color: MyTheme.greyColor,
+                            fontSize: 15.h,
+                            fontWeight: FontWeight.w400),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(5),
@@ -71,9 +71,9 @@ class FilteredMovieItem extends StatelessWidget {
                                   .textTheme
                                   .titleMedium
                                   ?.copyWith(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w400,
-                                      color: MyTheme.whiteColor),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: MyTheme.whiteColor),
                             ),
                           ],
                         ),

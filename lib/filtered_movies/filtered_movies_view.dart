@@ -39,8 +39,8 @@ class _FilteredMoviesViewState extends State<FilteredMoviesView> {
           if (state is GenreLoading) {
             return Center(
                 child: CircularProgressIndicator(
-              color: MyTheme.whiteColor,
-            ));
+                  color: MyTheme.whiteColor,
+                ));
           }
           if (state is GenreError) {
             return Center(

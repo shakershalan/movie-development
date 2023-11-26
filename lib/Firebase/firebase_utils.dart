@@ -14,7 +14,7 @@ class FirebaseUtils{
   static Future<void> addMovieToFireStore(Movie movie){
   var movieCollection = getMoviesCollection();
   DocumentReference<Movie> documentReference = movieCollection.doc() ;
-  movie.id = documentReference.id;
+  movie.id = documentReference.id ;
  return documentReference.set(movie);
 
   }

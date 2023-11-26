@@ -6,7 +6,7 @@ class GenresList {
   String? status_code;
   String? status_message;
   GenresList({
-      this.genres,this.status_code,this.status_message,this.success});
+    this.genres,this.status_code,this.status_message,this.success});
 
   GenresList.fromJson(dynamic json) {
     if (json['genres'] != null) {
@@ -32,8 +32,8 @@ class GenresList {
 
 class Genres {
   Genres({
-      this.id, 
-      this.name,});
+    this.id,
+    this.name,});
 
   Genres.fromJson(dynamic json) {
     id = json['id'];

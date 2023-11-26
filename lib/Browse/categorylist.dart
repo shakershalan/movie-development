@@ -19,7 +19,7 @@ class CategoryList extends StatelessWidget {
           height: MediaQuery.of(context).size.height * .15,
         ),
         Text(
-        genres.name??'',
+          genres.name??'',
           style: TextStyle(
               fontSize: 15,
               color: MyTheme.whiteColor,

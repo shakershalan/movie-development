@@ -41,7 +41,7 @@ class NewRelease extends StatefulWidget {
   bool? video;
   num? voteAverage;
   int? voteCount;
-bool isAdd = false;
+  bool isAdd = false;
   @override
   State<NewRelease> createState() => _NewReleaseState();
 }
@@ -50,7 +50,6 @@ class _NewReleaseState extends State<NewRelease> {
   late ListProvider listProvider;
 
   late Movie movie;
-
 
   @override
   Widget build(BuildContext context) {
@@ -77,8 +76,6 @@ class _NewReleaseState extends State<NewRelease> {
               widget.isAdd = !widget.isAdd;
               addMovie();
               listProvider.getAllMoviesFromJson();
-
-
             },
             child: widget.isAdd == false
                 ? Image.asset("assets/images/bookmark.png")
@@ -89,14 +86,11 @@ class _NewReleaseState extends State<NewRelease> {
 
   void addMovie() {
     Movie movie = Movie(
-      image: widget.posterPath,
-      filmName: widget.title,
-      date: widget.releaseDate,
-      actor: "",
-      isAdd: widget.isAdd
-
-
-    );
+        image: widget.posterPath,
+        filmName: widget.title,
+        date: widget.releaseDate,
+        actor: "",
+        isAdd: true);
     FirebaseUtils.addMovieToFireStore(movie).then((value) {
       print("Done");
       print(movie.isAdd);
@@ -107,7 +101,6 @@ class _NewReleaseState extends State<NewRelease> {
   void updateMovie() {
     FirebaseUtils.updateMovieFromJson(movie).then((value) {
       movie.isAdd = !movie.isAdd!;
-
       listProvider.getAllMoviesFromJson();
     });
   }
